@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="MSSQLConnector">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/java-libs/jdbc-connectors/mssql/mssql-jdbc-12.4.1.jre8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
