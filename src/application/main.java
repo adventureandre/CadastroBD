@@ -9,7 +9,7 @@ import java.util.List;
 public class main {
 
     public static void main(String[] args) {
-        System.out.println("=== Test 1: seller getPessoas ===");
+        System.out.println("=== Test 1: Pessoas getPessoas ===");
         PessoaFisicaDao pessoaFisicaDao = new PessoaFisicaDao(ConectorBD.getConnection());
         List<PessoaFisica> ps = pessoaFisicaDao.getPessoas();
 
