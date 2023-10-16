@@ -28,16 +28,6 @@ public class PessoaFisicaDao implements IPessoaFisicaDao {
             st.setString(3,obj.getCidade());
             st.setString(4,obj.getTelefone());
             st.setString(5,obj.getEmail());
-            st.executeUpdate();
-
-            st = conn.prepareStatement("INSERT INTO pessoa_fisica " +
-                    "(id_pessoa, cpf) " +
-                    "VALUES (?,?)",
-                    Statement.RETURN_GENERATED_KEYS);
-
-            st.setInt(1,obj.getId());
-            st.setString(2,obj.getCpf());
-
 
 
             int rowAffected = st.executeUpdate();
@@ -53,6 +43,16 @@ public class PessoaFisicaDao implements IPessoaFisicaDao {
             }else {
                 throw new DbException("Erro inesperado! Nenhuma linha afetada!");
             }
+
+            st = conn.prepareStatement("INSERT INTO pessoa_fisica " +
+                    "(id_pessoa, cpf) " +
+                    "VALUES (?,?)",
+                    Statement.RETURN_GENERATED_KEYS);
+
+            st.setInt(1,obj.getId());
+            st.setString(2,obj.getCpf());
+            st.executeUpdate();
+
 
         } catch (SQLException e) {
             throw new DbException(e.getMessage());

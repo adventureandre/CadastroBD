@@ -4,21 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/MSSQLConnector.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/db.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/application/main.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cadastro/model/util/ConectorBD.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cadastro/model/util/DbException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cadastrobd/model/IPessoaFisicaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisica.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisicaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaJuridica.java" afterDir="false" />
+    <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="Tinha esquecido de fazer commit kkkk">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CadastroBD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/CadastroBD.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisicaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisicaDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,11 +106,32 @@
       <updated>1697147422798</updated>
       <workItem from="1697147423817" duration="3694000" />
       <workItem from="1697376647347" duration="3903000" />
-      <workItem from="1697411004085" duration="7592000" />
+      <workItem from="1697411004085" duration="9983000" />
     </task>
+    <task id="LOCAL-00001" summary="Tinha esquecido de fazer commit kkkk">
+      <option name="closed" value="true" />
+      <created>1697433172471</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697433172471</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Tinha esquecido de fazer commit kkkk">
+      <option name="closed" value="true" />
+      <created>1697433251252</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697433251252</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tinha esquecido de fazer commit kkkk" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tinha esquecido de fazer commit kkkk" />
   </component>
 </project>

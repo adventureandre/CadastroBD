@@ -1,7 +1,7 @@
 package cadastrobd.model;
 
 public class Pessoa {
-    private int id;
+    private Integer id;
     private String nome;
     private String endereco;
     private String cidade;
@@ -12,7 +12,7 @@ public class Pessoa {
         // Construtor padrão
     }
 
-    public Pessoa(int id, String nome, String endereco, String cidade, String telefone, String email) {
+    public Pessoa(Integer id, String nome, String endereco, String cidade, String telefone, String email) {
         this.id = id;
         this.nome = nome;
         this.endereco = endereco;
