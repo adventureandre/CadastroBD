@@ -3,6 +3,9 @@ package application;
 import cadastro.model.util.ConectorBD;
 import cadastrobd.model.PessoaFisica;
 import cadastrobd.model.PessoaFisicaDao;
+import cadastrobd.model.PessoaJuridica;
+import cadastrobd.model.PessoaJuridicaDao;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -35,5 +38,16 @@ public class main {
         System.out.println("\n === Test 4: Pessoa Delete ===");
         pessoaFisicaDao.excluir(18);
         System.out.println("Delete completed");
+
+
+        System.out.println("\n === Test 5: PessoasJuridica Inserir ===");
+        PessoaJuridica newPessoaJ = new PessoaJuridica(null,"Andre","rua2","goiania","2222","adventureandre@hotmail.com","novaempresa");
+        PessoaJuridicaDao juridicaDao = new PessoaJuridicaDao(ConectorBD.getConnection());
+        juridicaDao.incluir(newPessoaJ);
+        System.out.println("inserido"+ newPessoa.getNome());
+
+        System.out.println("\n === Test 6: PessoasJuridica getPessoa ===");
+        PessoaJuridica verpessoa = juridicaDao.getPessoa(3);
+        System.out.println(verpessoa.getNome());
     }
 }
