@@ -70,49 +70,50 @@ public class PessoaFisicaDao implements IPessoaFisicaDao {
             st = conn.prepareStatement("UPDATE pessoas " +
 
                     "SET nome=?,endereco=?,cidade=?,telefone=?,email=? " +
-                    "WHERE id_pessoa =?",
+                    "WHERE id_pessoa =?");
+
+            st.setString(1, obj.getNome());
+            st.setString(2, obj.getEndereco());
+            st.setString(3, obj.getCidade());
+            st.setString(4, obj.getTelefone());
+            st.setString(5, obj.getEmail());
+            st.setInt(6, obj.getId());
+
+            st.executeUpdate();
+
+            st = conn.prepareStatement("UPDATE pessoa_fisica " +
+                            "SET cpf=? " +
+                            "WHERE id_pessoa=?",
                     Statement.RETURN_GENERATED_KEYS);
 
-            st.setString(1,obj.getNome());
-            st.setString(2,obj.getEndereco());
-            st.setString(3,obj.getCidade());
-            st.setString(4,obj.getTelefone());
-            st.setString(5,obj.getEmail());
-            st.setInt(6,obj.getId());
+            st.setString(1, obj.getCpf());
+            st.setInt(2, obj.getId());
+            st.executeUpdate();
 
-            int rowAffected = st.executeUpdate();
 
-            if (rowAffected > 0) {
-                ResultSet rs = st.getGeneratedKeys();
-
-                if (rs.next()) {
-                    int id = rs.getInt(1);
-                    obj.setId(id);
-                }
-                ConectorBD.closeResultSet(rs);
-
-                st = conn.prepareStatement("UPDATE pessoa_fisica " +
-                                "SET cpf=? " +
-                                "WHERE id_pessoa=?",
-                        Statement.RETURN_GENERATED_KEYS);
-
-                st.setString(1, obj.getCpf());
-                st.setInt(2, obj.getId());
-                st.executeUpdate();
-
-            } else {
-                throw new DbException("Erro inesperado! Nenhuma linha afetada!");
-            }
-
-        }catch (SQLException e){
+        } catch (SQLException e) {
             throw new DbException(e.getMessage());
+        }
+        finally {
+            ConectorBD.closeStatement(st);
         }
     }
 
 
     @Override
     public void excluir(Integer id) {
+        PreparedStatement st = null;
+        try {
+            st = conn.prepareStatement("DELETE FROM pessoas WHERE id_pessoa = ?");
+            st.setInt(1,id);
+            st.executeUpdate();
 
+        } catch (SQLException e) {
+            throw new DbException(e.getMessage());
+        }
+        finally {
+            ConectorBD.closeStatement(st);
+        }
     }
 
     @Override
