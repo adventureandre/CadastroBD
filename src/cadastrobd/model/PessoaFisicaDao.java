@@ -23,36 +23,36 @@ public class PessoaFisicaDao implements IPessoaFisicaDao {
                             "VALUES (?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
 
-            st.setString(1,obj.getNome());
+            st.setString(1, obj.getNome());
             st.setString(2, obj.getEndereco());
-            st.setString(3,obj.getCidade());
-            st.setString(4,obj.getTelefone());
-            st.setString(5,obj.getEmail());
+            st.setString(3, obj.getCidade());
+            st.setString(4, obj.getTelefone());
+            st.setString(5, obj.getEmail());
 
 
             int rowAffected = st.executeUpdate();
 
-            if (rowAffected > 0){
+            if (rowAffected > 0) {
                 ResultSet rs = st.getGeneratedKeys();
 
-                if (rs.next()){
+                if (rs.next()) {
                     int id = rs.getInt(1);
                     obj.setId(id);
                 }
                 ConectorBD.closeResultSet(rs);
-            }else {
+
+                st = conn.prepareStatement("INSERT INTO pessoa_fisica " +
+                                "(id_pessoa, cpf) " +
+                                "VALUES (?,?)",
+                        Statement.RETURN_GENERATED_KEYS);
+
+                st.setInt(1, obj.getId());
+                st.setString(2, obj.getCpf());
+                st.executeUpdate();
+
+            } else {
                 throw new DbException("Erro inesperado! Nenhuma linha afetada!");
             }
-
-            st = conn.prepareStatement("INSERT INTO pessoa_fisica " +
-                    "(id_pessoa, cpf) " +
-                    "VALUES (?,?)",
-                    Statement.RETURN_GENERATED_KEYS);
-
-            st.setInt(1,obj.getId());
-            st.setString(2,obj.getCpf());
-            st.executeUpdate();
-
 
         } catch (SQLException e) {
             throw new DbException(e.getMessage());
@@ -65,8 +65,50 @@ public class PessoaFisicaDao implements IPessoaFisicaDao {
 
     @Override
     public void alterar(PessoaFisica obj) {
+        PreparedStatement st = null;
+        try {
+            st = conn.prepareStatement("UPDATE pessoas " +
 
+                    "SET nome=?,endereco=?,cidade=?,telefone=?,email=? " +
+                    "WHERE id_pessoa =?",
+                    Statement.RETURN_GENERATED_KEYS);
+
+            st.setString(1,obj.getNome());
+            st.setString(2,obj.getEndereco());
+            st.setString(3,obj.getCidade());
+            st.setString(4,obj.getTelefone());
+            st.setString(5,obj.getEmail());
+            st.setInt(6,obj.getId());
+
+            int rowAffected = st.executeUpdate();
+
+            if (rowAffected > 0) {
+                ResultSet rs = st.getGeneratedKeys();
+
+                if (rs.next()) {
+                    int id = rs.getInt(1);
+                    obj.setId(id);
+                }
+                ConectorBD.closeResultSet(rs);
+
+                st = conn.prepareStatement("UPDATE pessoa_fisica " +
+                                "SET cpf=? " +
+                                "WHERE id_pessoa=?",
+                        Statement.RETURN_GENERATED_KEYS);
+
+                st.setString(1, obj.getCpf());
+                st.setInt(2, obj.getId());
+                st.executeUpdate();
+
+            } else {
+                throw new DbException("Erro inesperado! Nenhuma linha afetada!");
+            }
+
+        }catch (SQLException e){
+            throw new DbException(e.getMessage());
+        }
     }
+
 
     @Override
     public void excluir(Integer id) {

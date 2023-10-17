@@ -21,5 +21,7 @@ public class main {
         PessoaFisica newPessoa = new PessoaFisica(null,"Greg","rua2","goiania","2222","emaail.greg","gragcpf");
         pessoaFisicaDao.incluir(newPessoa);
         System.out.println("inserido"+ newPessoa.getNome());
+
+        System.out.println("=== Test 3: Pessoas UPdate ===");
     }
 }
