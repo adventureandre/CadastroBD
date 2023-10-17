@@ -4,12 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="(FIX) -  PessoasDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas">
-      <change afterPath="$PROJECT_DIR$/src/cadastrobd/model/IPessoaJuridicaDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaJuridicaDao.java" afterDir="false" />
+    <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="(Release) -  PessoasJuridicaDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas">
+      <change afterPath="$PROJECT_DIR$/src/application/CadastroBDTeste.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/Pessoa.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisicaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisicaDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaJuridica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaJuridica.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaJuridicaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaJuridicaDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +71,20 @@
       <recent name="cadastro.model.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.application.main">
+  <component name="RunManager" selected="Application.CadastroBDTeste">
+    <configuration name="CadastroBDTeste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="application.CadastroBDTeste" />
+      <module name="CadastroBD" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="application.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="application.main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.main" />
       <module name="CadastroBD" />
@@ -91,6 +107,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CadastroBDTeste" />
         <item itemvalue="Application.application.main" />
         <item itemvalue="Application.main" />
       </list>
@@ -107,7 +124,7 @@
       <workItem from="1697147423817" duration="3694000" />
       <workItem from="1697376647347" duration="3903000" />
       <workItem from="1697411004085" duration="9983000" />
-      <workItem from="1697499648271" duration="5441000" />
+      <workItem from="1697499648271" duration="9595000" />
     </task>
     <task id="LOCAL-00001" summary="Tinha esquecido de fazer commit kkkk">
       <option name="closed" value="true" />
@@ -149,7 +166,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697503245327</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="(Release) -  PessoasJuridicaDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas">
+      <option name="closed" value="true" />
+      <created>1697506412626</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697506412626</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,6 +185,7 @@
     <MESSAGE value="Devenvolvendo update pessoa" />
     <MESSAGE value="(Releases) -  UpDate - pessoa" />
     <MESSAGE value="(FIX) -  PessoasDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas" />
-    <option name="LAST_COMMIT_MESSAGE" value="(FIX) -  PessoasDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas" />
+    <MESSAGE value="(Release) -  PessoasJuridicaDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Release) -  PessoasJuridicaDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas" />
   </component>
 </project>
