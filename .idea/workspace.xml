@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="Tinha esquecido de fazer commit kkkk">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisicaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisicaDao.java" afterDir="false" />
+    <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="Devenvolvendo update pessoa">
+      <change beforePath="$PROJECT_DIR$/src/application/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +103,7 @@
       <workItem from="1697147423817" duration="3694000" />
       <workItem from="1697376647347" duration="3903000" />
       <workItem from="1697411004085" duration="9983000" />
-      <workItem from="1697499648271" duration="1688000" />
+      <workItem from="1697499648271" duration="2057000" />
     </task>
     <task id="LOCAL-00001" summary="Tinha esquecido de fazer commit kkkk">
       <option name="closed" value="true" />
@@ -122,7 +121,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697433251252</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Devenvolvendo update pessoa">
+      <option name="closed" value="true" />
+      <created>1697501865920</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697501865920</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -130,6 +137,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Tinha esquecido de fazer commit kkkk" />
-    <option name="LAST_COMMIT_MESSAGE" value="Tinha esquecido de fazer commit kkkk" />
+    <MESSAGE value="Devenvolvendo update pessoa" />
+    <option name="LAST_COMMIT_MESSAGE" value="Devenvolvendo update pessoa" />
   </component>
 </project>

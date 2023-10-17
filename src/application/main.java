@@ -22,6 +22,12 @@ public class main {
         pessoaFisicaDao.incluir(newPessoa);
         System.out.println("inserido"+ newPessoa.getNome());
 
+
+
         System.out.println("=== Test 3: Pessoas UPdate ===");
+        PessoaFisica mudaPessoa = pessoaFisicaDao.getPessoa(2);
+        mudaPessoa.setNome("jurema");
+        pessoaFisicaDao.alterar(mudaPessoa);
+        System.out.println("Update Completed");
     }
 }
