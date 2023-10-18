@@ -22,7 +22,7 @@ public class main {
         }
 
         System.out.println("\n === Test 2: Pessoas Inserir ===");
-        PessoaFisica newPessoa = new PessoaFisica(null,"Andre","rua2","goiania","2222","adventureandre@hotmail.com","03364545");
+        PessoaFisica newPessoa = new PessoaFisica(null,"Andre","rua2","goiania","GO","2222","adventureandre@hotmail.com","03364545");
         pessoaFisicaDao.incluir(newPessoa);
         System.out.println("inserido"+ newPessoa.getNome());
 
@@ -41,7 +41,7 @@ public class main {
 
 
         System.out.println("\n === Test 5: PessoasJuridica Inserir ===");
-        PessoaJuridica newPessoaJ = new PessoaJuridica(null,"Andre","rua2","goiania","2222","adventureandre@hotmail.com","novaempresa");
+        PessoaJuridica newPessoaJ = new PessoaJuridica(null,"Andre","rua2","goiania","GO","2222","adventureandre@hotmail.com","novaempresa");
         PessoaJuridicaDao juridicaDao = new PessoaJuridicaDao(ConectorBD.getConnection());
         juridicaDao.incluir(newPessoaJ);
         System.out.println("inserido"+ newPessoa.getNome());

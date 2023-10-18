@@ -4,6 +4,7 @@ public class Pessoa {
     private Integer id;
     private String nome;
     private String endereco;
+    private String estado;
     private String cidade;
     private String telefone;
     private String email;
@@ -12,19 +13,21 @@ public class Pessoa {
         // Construtor padrão
     }
 
-    public Pessoa(Integer id, String nome, String endereco, String cidade, String telefone, String email) {
+    public Pessoa(Integer id, String nome, String endereco, String cidade, String estado, String telefone, String email) {
         this.id = id;
         this.nome = nome;
         this.endereco = endereco;
         this.cidade = cidade;
         this.telefone = telefone;
         this.email = email;
+        this.estado = estado;
     }
 
     public void exibir() {
         System.out.println("ID: " + id);
         System.out.println("Nome: " + nome);
         System.out.println("Logradouro: " + endereco);
+        System.out.println("Estado: " + estado);
         System.out.println("Cidade: " + cidade);
         System.out.println("Telefone: " + telefone);
         System.out.println("Email: " + email);
@@ -56,6 +59,14 @@ public class Pessoa {
 
     public String getCidade() {
         return cidade;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
     }
 
     public void setCidade(String cidade) {

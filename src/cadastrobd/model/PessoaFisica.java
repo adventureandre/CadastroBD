@@ -1,9 +1,10 @@
 package cadastrobd.model;
+
 public class PessoaFisica extends Pessoa {
     private String cpf;
 
-    public PessoaFisica(Integer id, String nome, String logradouro, String cidade, String telefone, String email, String cpf) {
-        super(id, nome, logradouro, cidade, telefone, email);
+    public PessoaFisica(Integer id, String nome, String logradouro, String cidade, String estado, String telefone, String email, String cpf) {
+        super(id, nome, logradouro, cidade, estado, telefone, email);
         this.cpf = cpf;
     }
 

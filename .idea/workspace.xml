@@ -5,8 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="(Release) -  PessoasJuridicaDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas">
-      <change afterPath="$PROJECT_DIR$/src/application/CadastroBDTeste.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/application/CadastroBDTeste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/CadastroBDTeste.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/Pessoa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisica.java" afterDir="false" />
@@ -125,6 +126,9 @@
       <workItem from="1697376647347" duration="3903000" />
       <workItem from="1697411004085" duration="9983000" />
       <workItem from="1697499648271" duration="9595000" />
+      <workItem from="1697512762931" duration="13000" />
+      <workItem from="1697516157473" duration="31000" />
+      <workItem from="1697619806675" duration="778000" />
     </task>
     <task id="LOCAL-00001" summary="Tinha esquecido de fazer commit kkkk">
       <option name="closed" value="true" />

@@ -19,15 +19,16 @@ public class PessoaFisicaDao implements IPessoaFisicaDao {
         PreparedStatement st = null;
         try {
             st = conn.prepareStatement("INSERT INTO pessoas " +
-                            "(nome, endereco, cidade, telefone, email) " +
-                            "VALUES (?,?,?,?,?)",
+                            "(nome, endereco, cidade, estado, telefone, email) " +
+                            "VALUES (?,?,?,?,?,?)",
                     Statement.RETURN_GENERATED_KEYS);
 
             st.setString(1, obj.getNome());
             st.setString(2, obj.getEndereco());
             st.setString(3, obj.getCidade());
-            st.setString(4, obj.getTelefone());
-            st.setString(5, obj.getEmail());
+            st.setString(4, obj.getEstado());
+            st.setString(5, obj.getTelefone());
+            st.setString(6, obj.getEmail());
 
 
             int rowAffected = st.executeUpdate();
@@ -69,15 +70,16 @@ public class PessoaFisicaDao implements IPessoaFisicaDao {
         try {
             st = conn.prepareStatement("UPDATE pessoas " +
 
-                    "SET nome=?,endereco=?,cidade=?,telefone=?,email=? " +
+                    "SET nome=?,endereco=?,cidade=?,estado=?,telefone=?,email=? " +
                     "WHERE id_pessoa =?");
 
             st.setString(1, obj.getNome());
             st.setString(2, obj.getEndereco());
             st.setString(3, obj.getCidade());
-            st.setString(4, obj.getTelefone());
-            st.setString(5, obj.getEmail());
-            st.setInt(6, obj.getId());
+            st.setString(4, obj.getEstado());
+            st.setString(5, obj.getTelefone());
+            st.setString(6, obj.getEmail());
+            st.setInt(7, obj.getId());
 
             st.executeUpdate();
 
@@ -177,6 +179,7 @@ public class PessoaFisicaDao implements IPessoaFisicaDao {
                 rs.getString("nome"),
                 rs.getString("endereco"),
                 rs.getString("cidade"),
+                rs.getString("estado"),
                 rs.getString("telefone"),
                 rs.getString("email"),
                 rs.getString("cpf")
