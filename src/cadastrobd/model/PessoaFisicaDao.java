@@ -154,7 +154,8 @@ public class PessoaFisicaDao implements IPessoaFisicaDao {
     public void excluir(Integer id) {
         PreparedStatement st = null;
         try {
-            st = conn.prepareStatement("DELETE FROM pessoas WHERE id_pessoa = ?");
+            st = conn.prepareStatement("DELETE FROM pessoas WHERE id_pessoa IN " +
+                    "(SELECT id_pessoa FROM pessoa_fisica WHERE id_pessoa = ?)");
             st.setInt(1,id);
             st.executeUpdate();
 

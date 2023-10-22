@@ -49,10 +49,15 @@ public class CadastroBDTeste {
 
         System.out.println("\n===Alterar PessoaJuridica===");
         PessoaJuridica newpessoaJuridica = pessoaJuridicaDao.getPessoa(4);
-        newpessoaJuridica.setNome("ALFASET");
-        newpessoaJuridica.setCnpj("00004");
-        pessoaJuridicaDao.alterar(newpessoaJuridica);
-        System.out.println("PessoaJuridica Alterada com Sucesso!");
+        if(newpessoaJuridica == null){
+            System.out.println("Pessoa nao encontrada");
+        }else{
+            newpessoaJuridica.setNome("ALFASET");
+            newpessoaJuridica.setCnpj("00004");
+            pessoaJuridicaDao.alterar(newpessoaJuridica);
+            System.out.println("PessoaJuridica Alterada com Sucesso!");
+        }
+
 
 
         System.out.println("\n ===Lista todas PessoasJuridica===");

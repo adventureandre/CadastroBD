@@ -153,14 +153,15 @@ public class PessoaJuridicaDao implements IPessoaJuridicaDao {
     public void excluir(Integer id) {
         PreparedStatement st = null;
         try {
-            st = conn.prepareStatement("DELETE FROM pessoas WHERE id_pessoa = ?");
-            st.setInt(1,id);
+            st = conn.prepareStatement("DELETE FROM pessoas WHERE id_pessoa IN " +
+                    "(SELECT id_pessoa FROM pessoa_juridica WHERE id_pessoa = ?)"
+            );
+            st.setInt(1, id);
             st.executeUpdate();
 
         } catch (SQLException e) {
             throw new DbException(e.getMessage());
-        }
-        finally {
+        } finally {
             ConectorBD.closeStatement(st);
         }
     }
