@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="(Release) -  PessoasJuridicaDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="Melhoras no sistema">
+      <change afterPath="$PROJECT_DIR$/src/application/AlterarPessoas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/BuscarPessoas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/ExcluirPessoas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/IncluirPessoas.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/application/ListaTodos.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/application/CadastroBDTeste.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/CadastroBDTeste.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/application/main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/application/main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/Pessoa.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/Pessoa.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisicaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaFisicaDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaJuridica.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaJuridica.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/cadastrobd/model/PessoaJuridicaDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/cadastrobd/model/PessoaJuridicaDao.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -68,11 +69,12 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="application" />
       <recent name="cadastrobd.model" />
       <recent name="cadastro.model.util" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CadastroBDTeste">
+  <component name="RunManager" selected="Application.application.main">
     <configuration name="CadastroBDTeste" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="application.CadastroBDTeste" />
       <module name="CadastroBD" />
@@ -108,8 +110,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.CadastroBDTeste" />
         <item itemvalue="Application.application.main" />
+        <item itemvalue="Application.CadastroBDTeste" />
         <item itemvalue="Application.main" />
       </list>
     </recent_temporary>
@@ -128,7 +130,11 @@
       <workItem from="1697499648271" duration="9595000" />
       <workItem from="1697512762931" duration="13000" />
       <workItem from="1697516157473" duration="31000" />
-      <workItem from="1697619806675" duration="778000" />
+      <workItem from="1697619806675" duration="1061000" />
+      <workItem from="1697621055372" duration="5833000" />
+      <workItem from="1697752806254" duration="31000" />
+      <workItem from="1697766824057" duration="159000" />
+      <workItem from="1697981376023" duration="4870000" />
     </task>
     <task id="LOCAL-00001" summary="Tinha esquecido de fazer commit kkkk">
       <option name="closed" value="true" />
@@ -178,7 +184,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697506412626</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Melhoras no sistema">
+      <option name="closed" value="true" />
+      <created>1697620795330</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697620795331</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +204,7 @@
     <MESSAGE value="(Releases) -  UpDate - pessoa" />
     <MESSAGE value="(FIX) -  PessoasDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas" />
     <MESSAGE value="(Release) -  PessoasJuridicaDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas" />
-    <option name="LAST_COMMIT_MESSAGE" value="(Release) -  PessoasJuridicaDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas" />
+    <MESSAGE value="Melhoras no sistema" />
+    <option name="LAST_COMMIT_MESSAGE" value="Melhoras no sistema" />
   </component>
 </project>

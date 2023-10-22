@@ -1,53 +1,58 @@
 package application;
 
+
 import cadastro.model.util.ConectorBD;
-import cadastrobd.model.PessoaFisica;
 import cadastrobd.model.PessoaFisicaDao;
-import cadastrobd.model.PessoaJuridica;
 import cadastrobd.model.PessoaJuridicaDao;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Scanner;
 
 public class main {
 
     public static void main(String[] args) {
-
-        System.out.println("=== Test 1: Pessoas getPessoas ===");
         PessoaFisicaDao pessoaFisicaDao = new PessoaFisicaDao(ConectorBD.getConnection());
-        List<PessoaFisica> ps = pessoaFisicaDao.getPessoas();
+        PessoaJuridicaDao pessoaJuridicaDao = new PessoaJuridicaDao(ConectorBD.getConnection());
 
-        for (PessoaFisica obj: ps) {
-            obj.exibir();
+        Scanner sc = new Scanner(System.in);
+
+        Integer opcao;
+
+        do {
+            System.out.println("======================");
+            System.out.println("1 - Incluir Pessoa");
+            System.out.println("2 - Alterar Pessoa");
+            System.out.println("3 - Excluir Pessoa");
+            System.out.println("4 - Buscar pelo Id");
+            System.out.println("5 - Exibir Todos");
+            System.out.println("0 - Finalizar Programa");
+            System.out.println("======================");
+            opcao = sc.nextInt();
+
+            switch (opcao) {
+                case 1:
+                    IncluirPessoas incluirpessoas = new IncluirPessoas(sc);
+                    break;
+                case 2:
+                    AlterarPessoas alterarPessoas = new AlterarPessoas(sc);
+                    break;
+                case 3:
+                    ExcluirPessoas excluirPessoas = new ExcluirPessoas(sc);
+                    break;
+                case 4:
+                    BuscarPessoas buscarPessoas = new BuscarPessoas(sc);
+                    break;
+                case 5:
+                    ListaTodos listaTodos = new ListaTodos(sc);
+                    break;
+                case 0:
+                    System.out.println("Programa finalizado");
+                    break;
+                default:
+                    System.out.println("Opção inválida. Escolha novamente.");
+                    break;
+            }
         }
-
-        System.out.println("\n === Test 2: Pessoas Inserir ===");
-        PessoaFisica newPessoa = new PessoaFisica(null,"Andre","rua2","goiania","GO","2222","adventureandre@hotmail.com","03364545");
-        pessoaFisicaDao.incluir(newPessoa);
-        System.out.println("inserido"+ newPessoa.getNome());
-
-
-
-        System.out.println("\n === Test 3: Pessoas Update ===");
-        PessoaFisica mudaPessoa = pessoaFisicaDao.getPessoa(2);
-        mudaPessoa.setCidade("anapolis");
-        pessoaFisicaDao.alterar(mudaPessoa);
-        System.out.println("Update Completed");
-
-
-        System.out.println("\n === Test 4: Pessoa Delete ===");
-        pessoaFisicaDao.excluir(18);
-        System.out.println("Delete completed");
-
-
-        System.out.println("\n === Test 5: PessoasJuridica Inserir ===");
-        PessoaJuridica newPessoaJ = new PessoaJuridica(null,"Andre","rua2","goiania","GO","2222","adventureandre@hotmail.com","novaempresa");
-        PessoaJuridicaDao juridicaDao = new PessoaJuridicaDao(ConectorBD.getConnection());
-        juridicaDao.incluir(newPessoaJ);
-        System.out.println("inserido"+ newPessoa.getNome());
-
-        System.out.println("\n === Test 6: PessoasJuridica getPessoa ===");
-        PessoaJuridica verpessoa = juridicaDao.getPessoa(3);
-        System.out.println(verpessoa.getNome());
+        while (opcao != 0);
+        sc.close();
     }
 }

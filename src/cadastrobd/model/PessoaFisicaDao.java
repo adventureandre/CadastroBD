@@ -68,38 +68,86 @@ public class PessoaFisicaDao implements IPessoaFisicaDao {
     public void alterar(PessoaFisica obj) {
         PreparedStatement st = null;
         try {
-            st = conn.prepareStatement("UPDATE pessoas " +
+            if (obj != null) { // Verifica se o objeto não é nulo
+                StringBuilder query = new StringBuilder("UPDATE pessoas " +
+                        "SET ");
 
-                    "SET nome=?,endereco=?,cidade=?,estado=?,telefone=?,email=? " +
-                    "WHERE id_pessoa =?");
+                boolean hasUpdate = false; // Variável para verificar se houve alguma atualização
 
-            st.setString(1, obj.getNome());
-            st.setString(2, obj.getEndereco());
-            st.setString(3, obj.getCidade());
-            st.setString(4, obj.getEstado());
-            st.setString(5, obj.getTelefone());
-            st.setString(6, obj.getEmail());
-            st.setInt(7, obj.getId());
+                // Verifica se cada campo não está vazio antes de adicioná-lo à consulta SQL
+                if (obj.getNome() != null && !obj.getNome().isEmpty()) {
+                    query.append("nome=?, ");
+                    hasUpdate = true;
+                }
+                if (obj.getEndereco() != null && !obj.getEndereco().isEmpty()) {
+                    query.append("endereco=?, ");
+                    hasUpdate = true;
+                }
+                if (obj.getCidade() != null && !obj.getCidade().isEmpty()) {
+                    query.append("cidade=?, ");
+                    hasUpdate = true;
+                }
+                if (obj.getEstado() != null && !obj.getEstado().isEmpty()) {
+                    query.append("estado=?, ");
+                    hasUpdate = true;
+                }
+                if (obj.getTelefone() != null && !obj.getTelefone().isEmpty()) {
+                    query.append("telefone=?, ");
+                    hasUpdate = true;
+                }
+                if (obj.getEmail() != null && !obj.getEmail().isEmpty()) {
+                    query.append("email=?, ");
+                    hasUpdate = true;
+                }
 
-            st.executeUpdate();
+                // Remove o espaço em branco e a última vírgula, se houver
+                if (hasUpdate) {
+                    query.setLength(query.length() - 2);
+                }
 
-            st = conn.prepareStatement("UPDATE pessoa_fisica " +
-                            "SET cpf=? " +
-                            "WHERE id_pessoa=?",
-                    Statement.RETURN_GENERATED_KEYS);
+                // Adiciona a cláusula WHERE
+                query.append(" WHERE id_pessoa =?");
 
-            st.setString(1, obj.getCpf());
-            st.setInt(2, obj.getId());
-            st.executeUpdate();
+                st = conn.prepareStatement(query.toString());
 
+                int parameterIndex = 1; // Conta os ? do SQL
 
+                // Define os parâmetros que foram incluídos na consulta
+                if (obj.getNome() != null && !obj.getNome().isEmpty()) {
+                    st.setString(parameterIndex++, obj.getNome());
+                }
+                if (obj.getEndereco() != null && !obj.getEndereco().isEmpty()) {
+                    st.setString(parameterIndex++, obj.getEndereco());
+                }
+                if (obj.getCidade() != null && !obj.getCidade().isEmpty()) {
+                    st.setString(parameterIndex++, obj.getCidade());
+                }
+                if (obj.getEstado() != null && !obj.getEstado().isEmpty()) {
+                    st.setString(parameterIndex++, obj.getEstado());
+                }
+                if (obj.getTelefone() != null && !obj.getTelefone().isEmpty()) {
+                    st.setString(parameterIndex++, obj.getTelefone());
+                }
+                if (obj.getEmail() != null && !obj.getEmail().isEmpty()) {
+                    st.setString(parameterIndex++, obj.getEmail());
+                }
+
+                // Último parâmetro
+                st.setInt(parameterIndex, obj.getId());
+
+                // Se houver alguma atualização a ser feita, execute-a
+                if (hasUpdate) {
+                    st.executeUpdate();
+                }
+            }
         } catch (SQLException e) {
             throw new DbException(e.getMessage());
-        }
-        finally {
+        } finally {
             ConectorBD.closeStatement(st);
         }
     }
+
+
 
 
     @Override
