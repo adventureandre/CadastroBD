@@ -20,7 +20,7 @@ public class CadastroBDTeste {
 
 
         System.out.println("\n ===Alterar Pessoa===");
-        newpessoa = pessoaFisicaDao.getPessoa(2);
+        newpessoa = pessoaFisicaDao.getPessoa(1);
         newpessoa.setNome("Aurora2");
         newpessoa.setCpf("545454545");
         pessoaFisicaDao.alterar(newpessoa);
