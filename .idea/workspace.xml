@@ -4,12 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="Todos metodos implementados">
-      <change afterPath="$PROJECT_DIR$/DB.Sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7dc52ab2-c55b-4ad4-9105-712608808e43.xml.tmp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7dc52ab2-c55b-4ad4-9105-712608808e43/storage_v2/_src_/database/Loja.GjokAA/schema/dbo.sYMBAA.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7dc52ab2-c55b-4ad4-9105-712608808e43/storage_v2/_src_/database/Loja.GjokAA/schema/dbo.sYMBAA.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="59843de7-0b61-4e58-a525-041aad89c339" name="Changes" comment="(Fix) - Adicionei o DB.Sql" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,7 +38,6 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "last_opened_file_path": "/home/andre/Área de Trabalho/Dev/ESTACIO/Java/CadastroBD",
     "node.js.detected.package.eslint": "true",
@@ -142,7 +136,7 @@
       <workItem from="1698715537750" duration="44000" />
       <workItem from="1698715674834" duration="613000" />
       <workItem from="1699152023372" duration="589000" />
-      <workItem from="1699484107488" duration="3577000" />
+      <workItem from="1699484107488" duration="3840000" />
     </task>
     <task id="LOCAL-00001" summary="Tinha esquecido de fazer commit kkkk">
       <option name="closed" value="true" />
@@ -208,7 +202,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697986330973</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="(Fix) - Adicionei o DB.Sql">
+      <option name="closed" value="true" />
+      <created>1699488016390</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699488016390</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -222,6 +224,7 @@
     <MESSAGE value="(Release) -  PessoasJuridicaDAO - fixed inserir,alterar,excluir, getPessoa, getPessoas" />
     <MESSAGE value="Melhoras no sistema" />
     <MESSAGE value="Todos metodos implementados" />
-    <option name="LAST_COMMIT_MESSAGE" value="Todos metodos implementados" />
+    <MESSAGE value="(Fix) - Adicionei o DB.Sql" />
+    <option name="LAST_COMMIT_MESSAGE" value="(Fix) - Adicionei o DB.Sql" />
   </component>
 </project>

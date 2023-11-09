@@ -1,8 +1,4 @@
--- DROP SCHEMA dbo;
-
-CREATE SCHEMA dbo;
 -- Loja.dbo.pessoas definition
-
 -- Drop table
 
 -- DROP TABLE Loja.dbo.pessoas;
