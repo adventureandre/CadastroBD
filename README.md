@@ -26,14 +26,14 @@ Para executar cada parte do projeto, siga as instruções detalhadas no README d
 
 ## Contribuição e Suporte
 
-Para contribuir ou relatar problemas no repositório do projeto, acesse os diretórios `application/Main` e `application/CadastroDBTeste`. Para suporte adicional, entre em contato com o desenvolvedor [Nome do Desenvolvedor](link_do_perfil).
+Para contribuir ou relatar problemas no repositório do projeto, acesse os diretórios `application/Main` e `application/CadastroDBTeste`. Para suporte adicional, entre em contato com o desenvolvedor [André Luíz F Souza](https://github.com/adventureandre).
 
 ## Licença
 
-Este projeto é distribuído sob a licença MIT. Consulte o arquivo [LICENSE](link_do_arquivo_LICENSE) para mais informações.
+Este projeto é distribuído sob a licença MIT. Consulte o arquivo [License File](https://github.com/adventureandre/Lib/blob/main/LICENSE) para mais informações.
 
-## Créditos
+## Credits
 
-- [Nome do Desenvolvedor](link_do_perfil) (Desenvolvedor)
-- [Link do Desenvolvedor no LinkedIn](link_do_linkedin) (Linkedin)
-- [Website do Desenvolvedor](link_do_site) (Site)
+- [André Luíz F Souza](https://github.com/adventureandre) (Developer)
+- [ADVENTUREANDRE](https://www.linkedin.com/in/adventureandre) (Linkedin)
+- [Adventure.dev.br](https://adventure.dev.br) (Site)
