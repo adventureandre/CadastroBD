@@ -1,22 +1,41 @@
-# Missão Prática | Nível 3 | Mundo 3
+# RPG0016 - BackEnd sem banco não tem
 
-## RPG0016  - BackEnd sem banco não tem
-- Criação de aplicativo Java, com acesso ao banco de dados SQL Server através do
-middleware JDBC.
+## Descrição
 
-## Objetivos da prática
+Este projeto Java foi desenvolvido para cumprir a missão prática no nível 3 do mundo 3, intitulada RPG0016 - BackEnd sem banco não tem. O principal objetivo é criar um aplicativo Java capaz de acessar um banco de dados SQL Server utilizando o middleware JDBC.
 
-- Persistência com base no middleware JDBC.
-- Padrão DAO (Data Access Object) no manuseio de dados.
-- Mapeamento objeto-relacional em sistemas Java.
+## Objetivos da Prática
 
+- Demonstrar a persistência de dados por meio do middleware JDBC.
+- Implementar o padrão DAO (Data Access Object) para manipulação de dados.
+- Realizar o mapeamento objeto-relacional em sistemas Java.
 
-## Credits
+## Estrutura do Projeto
 
-- [André Luíz F Souza](https://github.com/adventureandre) (Developer)
-- [ADVENTUREANDRE](https://www.linkedin.com/in/adventureandre) (Linkedin)
-- [Adventure.dev.br](https://adventure.dev.br) (Site)
+Este projeto está dividido em duas partes:
 
-## License
+### Parte 1 - application/Main
 
-The MIT License (MIT). Please see [License File](https://github.com/adventureandre/Lib/blob/main/LICENSE) for more information.
+A primeira parte contém a lógica principal e os componentes para acessar o banco de dados SQL Server e realizar a persistência de dados. Para executar essa parte, siga as instruções no README do diretório `application/Main`. O arquivo com o método `main` para execução está localizado lá.
+
+### Parte 2 - application/CadastroDBTeste
+
+A segunda parte refere-se à realização de testes ou outras funcionalidades específicas relacionadas à primeira parte do projeto. Todos os arquivos e funcionalidades relacionados a testes ou complementares estão no diretório `application/CadastroDBTeste`. O arquivo com o método `main` para execução nesse contexto é encontrado nesse diretório.
+
+## Execução do Aplicativo
+
+Para executar cada parte do projeto, siga as instruções detalhadas no README de cada diretório correspondente às partes do projeto.
+
+## Contribuição e Suporte
+
+Para contribuir ou relatar problemas no repositório do projeto, acesse os diretórios `application/Main` e `application/CadastroDBTeste`. Para suporte adicional, entre em contato com o desenvolvedor [Nome do Desenvolvedor](link_do_perfil).
+
+## Licença
+
+Este projeto é distribuído sob a licença MIT. Consulte o arquivo [LICENSE](link_do_arquivo_LICENSE) para mais informações.
+
+## Créditos
+
+- [Nome do Desenvolvedor](link_do_perfil) (Desenvolvedor)
+- [Link do Desenvolvedor no LinkedIn](link_do_linkedin) (Linkedin)
+- [Website do Desenvolvedor](link_do_site) (Site)

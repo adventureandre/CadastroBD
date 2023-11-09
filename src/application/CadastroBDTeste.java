@@ -20,11 +20,15 @@ public class CadastroBDTeste {
 
 
         System.out.println("\n ===Alterar Pessoa===");
-        newpessoa = pessoaFisicaDao.getPessoa(1);
+        newpessoa = pessoaFisicaDao.getPessoa(2);
+        if(newpessoa != null){
         newpessoa.setNome("Aurora2");
         newpessoa.setCpf("545454545");
         pessoaFisicaDao.alterar(newpessoa);
-        System.out.println("Pessoa Alterada com Sucesso!");
+        System.out.println("Pessoa Alterada com Sucesso!");}
+        else {
+            System.out.println("Pessoa não encontrada!");
+        }
 
 
         System.out.println("\n====Lista todas Pessoas====");
